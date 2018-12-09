@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Seleccionamiento">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivteclogo"
+        android:background="@mipmap/teclogo2"
+        android:layout_centerHorizontal="true"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="119dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/bVerHorario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivteclogo"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@color/bienvenido"
+                android:paddingLeft="18dp"
+                android:paddingRight="17dp"
+                android:text="1. Ver Horario"
+                android:textColor="@color/blanco"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/bInventario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bVerHorario"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:background="@color/bienvenido"
+                android:paddingLeft="23dp"
+                android:paddingRight="23.5dp"
+                android:text="2. Inventario"
+                android:textColor="@color/blanco"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/bMantenimiento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bInventario"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:background="@color/bienvenido"
+                android:paddingLeft="9dp"
+                android:paddingRight="8.8dp"
+                android:text="3. Mantenimiento"
+                android:textColor="@color/blanco"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/bRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bMantenimiento"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:background="@color/bienvenido"
+                android:paddingLeft="35dp"
+                android:paddingRight="35dp"
+                android:text="4. Registro"
+                android:textColor="@color/blanco"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/bAprofe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bRegistro"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:background="@color/bienvenido"
+                android:paddingLeft="33dp"
+                android:paddingRight="35dp"
+                android:text="5. Agregar\nProfesor"
+                android:textColor="@color/blanco"
+                android:textSize="20dp" />
+            <Button
+                android:id="@+id/bAmat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bAprofe"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:background="@color/bienvenido"
+                android:paddingLeft="36dp"
+                android:paddingRight="37dp"
+                android:text="6. Agregar\nMateria"
+                android:textColor="@color/blanco"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

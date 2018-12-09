@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="nombres">
+        <item></item>
+        <item>yaneth</item>
+        <item>administrador</item>
+        <item>ayudante</item>
+    </string-array>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="profesores">
+        <item></item>
+        <item>Ireri Tsipekua Rojas Prospero</item>
+        <item>Rogelio Ferreira Escutia</item>
+        <item>Octavio Salud Ortiz Ortiz</item>
+        <item>Salvador Jonathan Villagomez Cardenas</item>
+        <item>Aurelio Amaury Coria Ramirez</item>
+        <item>Fernando Villaseñor Bejar</item>
+        <item>Sergio Francisco Gil Jimenez</item>
+        <item>Samara Herrera Muñoz</item>
+        <item>Victor Manuel Chavez Gaona</item>
+        <item>Brenda Gonzalez Gomez</item>
+        <item>Jorge Mora Garcia</item>
+        <item>Efren de Jesus Pacheco Pimentel</item>
+        <item>Sergio Monjaraz Ramirez</item>
+        <item>Kenia Aline Ayala Robles</item>
+        <item></item>
+    </string-array>
+</resources>

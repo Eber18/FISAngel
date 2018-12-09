@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Mantenimiento">
+
+    <TextView
+        android:id="@+id/tvEquipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/equipo"
+        android:textSize="21dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/negro"/>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/esEquipo"
+        android:layout_marginRight="1dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="23dp"
+        android:inputType="text"/>
+
+    <TextView
+        android:id="@+id/tvMan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mantenimiento"
+        android:textSize="21dp"
+        android:layout_below="@+id/tvEquipo"
+        android:layout_marginTop="27dp"
+        android:textColor="@color/negro"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etman"
+        android:hint="        Que se hizo?"
+        android:layout_marginRight="1dp"
+        android:layout_below="@+id/esEquipo"
+        android:layout_marginLeft="175dp"
+        android:layout_marginTop="22dp"
+        android:inputType="text"/>
+
+    <TextView
+        android:id="@+id/tvF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fecha"
+        android:layout_below="@+id/etman"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/negro"/>
+
+    <CalendarView
+        android:id="@+id/CV2"
+        android:layout_width="315dp"
+        android:layout_height="304dp"
+        android:layout_below="@+id/etman"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="0dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bAlta"
+        android:text="Guardar"
+        android:layout_below="@+id/CV2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:background="@color/bienvenido"
+        android:textColor="@color/plata"
+        android:textSize="20dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+
+</RelativeLayout>

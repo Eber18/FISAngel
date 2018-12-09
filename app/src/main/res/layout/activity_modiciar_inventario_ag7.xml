@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Modificar_Inventario_Ag7">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvNun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvM"
+                android:layout_marginTop="20dp"
+                android:text="@string/equipo"
+                android:textColor="@color/negro"
+                android:textSize="20dp" />
+            <Spinner
+                android:id="@+id/etNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="104dp"
+                android:layout_marginTop="-27dp"
+                android:layout_marginRight="1dp"/>
+
+            <TextView
+                android:id="@+id/tvSer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/serie"
+                android:textColor="@color/negro"
+                android:textSize="20dp" />
+            <EditText
+                android:id="@+id/etSer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvN"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="-35dp"
+                android:layout_marginRight="1dp"
+                android:hint="  num serie"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/tvHar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@color/negro"
+                android:text="@string/hardware"
+                android:textColor="@color/plata"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tvTec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/teclado"
+                android:textColor="@color/negro"
+                android:textSize="20dp" />
+            <EditText
+                android:id="@+id/etTec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="92dp"
+                android:layout_marginTop="-35dp"
+                android:layout_marginRight="1dp"
+                android:hint="  teclado"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/tvMou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/mouse"
+                android:textColor="@color/negro"
+                android:textSize="20dp" />
+            <EditText
+                android:id="@+id/etMou"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="72dp"
+                android:layout_marginTop="-35dp"
+                android:layout_marginRight="1dp"
+                android:hint="  ratón"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/tvMon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/monitor"
+                android:textColor="@color/negro"
+                android:textSize="20dp" />
+            <EditText
+                android:id="@+id/etMon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="-35dp"
+                android:layout_marginRight="1dp"
+                android:hint="  monitor"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/tvRam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/ram"
+                android:textColor="@color/negro"
+                android:textSize="20dp" />
+            <EditText
+                android:id="@+id/etRam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="-35dp"
+                android:layout_marginRight="1dp"
+                android:hint="  ram en GB"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/tvDd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/dd"
+                android:textColor="@color/negro"
+                android:textSize="20dp" />
+            <EditText
+                android:id="@+id/etDd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="74dp"
+                android:layout_marginTop="-35dp"
+                android:layout_marginRight="1dp"
+                android:hint="  disco duro GB"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/tvPro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/procesador"
+                android:textColor="@color/negro"
+                android:textSize="20dp" />
+            <EditText
+                android:id="@+id/etPro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="-35dp"
+                android:layout_marginRight="1dp"
+                android:hint="  procesador"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/tvOb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/observaciones"
+                android:textColor="@color/negro"
+                android:textSize="20dp" />
+            <EditText
+                android:id="@+id/etOb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="160dp"
+                android:layout_marginTop="-35dp"
+                android:layout_marginRight="1dp"
+                android:hint="  observaciones"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/tvSof"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/plata"
+                android:layout_gravity="center"
+                android:text="@string/software"
+                android:textColor="@color/bienvenido"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tvDev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/dev"
+                android:textColor="@color/negro"
+                android:textSize="20dp" />
+            <CheckBox
+                android:id="@+id/chbDev"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="-30dp"
+                android:layout_marginRight="180dp"
+                />
+
+            <TextView
+                android:id="@+id/tvNet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/net"
+                android:textColor="@color/negro"
+                android:textSize="20dp" />
+            <CheckBox
+                android:id="@+id/chbNet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="-30dp"
+                android:layout_marginRight="180dp"/>
+
+            <TextView
+                android:id="@+id/tvEcl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/eclip"
+                android:textColor="@color/negro"
+                android:textSize="20dp" />
+            <CheckBox
+                android:id="@+id/chbEcl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="-30dp"
+                android:layout_marginRight="180dp"/>
+
+            <TextView
+                android:id="@+id/tvNote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/note"
+                android:textColor="@color/negro"
+                android:textSize="20dp" />
+            <CheckBox
+                android:id="@+id/chbNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="-30dp"
+                android:layout_marginRight="180dp"/>
+
+            <TextView
+                android:id="@+id/tvGed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/ged"
+                android:textColor="@color/negro"
+                android:textSize="20dp" />
+            <CheckBox
+                android:id="@+id/chbGed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="-30dp"
+                android:layout_marginRight="180dp"/>
+
+            <TextView
+                android:id="@+id/tvDia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/dia"
+                android:textColor="@color/negro"
+                android:textSize="20dp" />
+            <CheckBox
+                android:id="@+id/chbDia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="-30dp"
+                android:layout_marginRight="180dp"/>
+
+            <TextView
+                android:id="@+id/tvVis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/visual"
+                android:textColor="@color/negro"
+                android:textSize="20dp" />
+            <CheckBox
+                android:id="@+id/chbVis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="-30dp"
+                android:layout_marginRight="180dp"
+                />
+
+            <Button
+                android:id="@+id/bCom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@color/negro"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="Completar"
+                android:textColor="@color/plata"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

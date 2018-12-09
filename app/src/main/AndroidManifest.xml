@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="itm.ang.controlab">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Seleccionamiento" />
+        <activity android:name=".Seleccionamientoy" />
+        <activity android:name=".VerHorario" />
+        <activity android:name=".Reddes" />
+        <activity android:name=".Registro" />
+        <activity android:name=".Ltw" />
+        <activity android:name=".Mantenimiento" />
+        <activity android:name=".Menu_mantenimiento" />
+        <activity android:name=".Menu_inventario" />
+        <activity android:name=".Menu_ajustes" />
+        <activity android:name=".Modificar_Inventario_Ag7" />
+        <activity android:name=".Seleccion_inventario_salon" />
+        <activity android:name=".Modificar_Inventario_Ltw" />
+        <activity android:name=".Menu_Registrar" />
+        <activity android:name=".Cambiar_datos" />
+        <activity android:name=".Agregar_profe" />
+        <activity android:name=".Agregar_materia"></activity>
+    </application>
+
+</manifest>

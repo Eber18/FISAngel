@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="materias">
+        <item></item>
+        <item>Desarrollo de Aplicaciones Web</item>
+        <item>Fundamentos de Programación</item>
+        <item>Bases de Datos Distribuidas</item>
+        <item>Administración de Servidores</item>
+        <item>Programacion Logica y Funcional</item>
+        <item>Fundamentos de Bases de Datos</item>
+        <item>Topicos Selectos de Web</item>
+        <item>Programanción en Ambiente Cliente</item>
+        <item>Redes de Computadoras</item>
+        <item>Tecnologias Inalambricas</item>
+        <item>Fundamentos de Redes</item>
+        <item>Administración de Redes</item>
+        <item>Redes Emergentes</item>
+        <item>Interconectividad de Redes</item>
+        <item>Telecomunicaciones</item>
+    </string-array>
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VerHorario">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivteclogo"
+        android:background="@mipmap/teclogo2"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bRedes"
+        android:text="Redes"
+        android:layout_below="@+id/ivteclogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@color/negro"
+        android:textColor="@color/plata"
+        android:textSize="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bLtw"
+        android:text="LTW"
+        android:layout_below="@+id/bRedes"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:background="@color/negro"
+        android:textColor="@color/plata"
+        android:textSize="20dp"
+        android:paddingLeft="29.5dp"
+        android:paddingRight="29.5dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bLis"
+        android:text="LIS"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:layout_below="@+id/bLtw"
+        android:background="@color/negro"
+        android:textColor="@color/plata"
+        android:textSize="20dp"
+        android:paddingLeft="35dp"
+        android:paddingRight="35dp"/>
+
+</RelativeLayout>

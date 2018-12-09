@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Agregar_materia">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivteclogo"
+        android:background="@mipmap/teclogo2"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/tvamat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/inmat"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/ivteclogo"
+        android:layout_marginTop="27dp"
+        android:textColor="@color/negro"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etamat"
+        android:hint="nombre de la materia a agregar"
+        android:layout_below="@+id/tvamat"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:inputType="text"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bAcep"
+        android:text="Guardar"
+        android:layout_below="@+id/etamat"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@color/bienvenido"
+        android:textColor="@color/plata"
+        android:textSize="20dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+
+
+</RelativeLayout>

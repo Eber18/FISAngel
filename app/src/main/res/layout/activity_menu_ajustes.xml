@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Menu_ajustes">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivteclogo1"
+        android:background="@mipmap/teclogo2"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bVerc"
+        android:text="1. VER DATOS"
+        android:layout_below="@+id/ivteclogo1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:background="@color/negro"
+        android:textColor="@color/plata"
+        android:textSize="20dp"
+        android:paddingLeft="49dp"
+        android:paddingRight="49dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bCcon"
+        android:text="2. CAMBIAR DATOS"
+        android:layout_below="@+id/bVerc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:background="@color/negro"
+        android:textColor="@color/plata"
+        android:textSize="20dp"
+        android:paddingLeft="20.7dp"
+        android:paddingRight="24.5dp"/>
+
+</RelativeLayout>
