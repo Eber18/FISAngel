@@ -9,8 +9,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 import java.util.ArrayList;
 
-import itm.ang.controlab.BasesdeDatos.Conecxion;
-
 public class MainActivity extends AppCompatActivity {
     String usuario="", password="";
     private EditText etUsuario, etPasword;
@@ -31,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
         passwords.add("admin");
         passwords.add("social");
 
-        //Conecxion conmat=new Conecxion(this,"BaseMaterias",null,1);
         ConexionSQLiteHelper conn=new ConexionSQLiteHelper(this,"bd_Laboratorios",null,1);
 
         bEntrar.setOnClickListener(new View.OnClickListener() {

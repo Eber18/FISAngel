@@ -32,7 +32,9 @@
         <activity android:name=".Menu_Registrar" />
         <activity android:name=".Cambiar_datos" />
         <activity android:name=".Agregar_profe" />
-        <activity android:name=".Agregar_materia"></activity>
+        <activity android:name=".Agregar_materia" />
+        <activity android:name=".Mostrar_Practica" />
+        <activity android:name=".Mostrar_Mantenimiento"></activity>
     </application>
 
 </manifest>

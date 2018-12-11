@@ -1,5 +1,6 @@
 package itm.ang.controlab;
 
+import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
@@ -9,13 +10,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 import java.util.ArrayList;
 
-import itm.ang.controlab.BasesdeDatos.BaseMaterias;
-import itm.ang.controlab.BasesdeDatos.Conecxion;
 import itm.ang.controlab.Utilidades.Utilidades;
 import itm.ang.controlab.entidades.Materia;
 import itm.ang.controlab.entidades.Profesor;
@@ -29,6 +27,10 @@ public class Registro extends AppCompatActivity {
     ArrayList<Materia> listaMateria;
     ArrayList<Profesor> listaProfesor;
 
+    int anioG,mesG,diaG;
+    String fecha="";
+    Long date;
+
     ConexionSQLiteHelper conn;
 
     @Override
@@ -37,8 +39,15 @@ public class Registro extends AppCompatActivity {
         setContentView(R.layout.activity_registro);
         spprofe = (Spinner) findViewById(R.id.spprofe);
         spmate = (Spinner) findViewById(R.id.spmate);
+        bRegistro = (Button)findViewById(R.id.bRegistro);
+        CV=(CalendarView)findViewById(R.id.CV);
+        etNom=(EditText)findViewById(R.id.etNom);
+        etA=(EditText)findViewById(R.id.etA);
+
+        final String profesor="Profesor",materia="Materia";
 
         conn=new ConexionSQLiteHelper(getApplicationContext(),"bd_Laboratorios",null,1);
+        date=CV.getDate();
 
         consultarListaProfesores();
         consultarListaMaterias();
@@ -49,9 +58,32 @@ public class Registro extends AppCompatActivity {
         ArrayAdapter<CharSequence> matAdap=new ArrayAdapter(this,android.R.layout.simple_spinner_item,materias);
         spmate.setAdapter(matAdap);
 
-        bRegistro.setOnClickListener(new View.OnClickListener() {
+        CV.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+            @Override
+            public void onSelectedDayChange(CalendarView calendarView, int anio, int mes, int dia) {
+                if (CV.getDate() != date) {
+                    date = CV.getDate();
+                    anioG=anio;
+                    mesG=mes;
+                    diaG=dia;
+                    fecha=""+anioG+"-"+mesG+"-"+diaG;
+                    //Toast.makeText(calendarView.getContext(), "Año=" + anioG + " Mes=" + mesG + " dia=" + diaG, Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+       bRegistro.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"Profesor: "+spprofe.getSelectedItem().toString(),Toast.LENGTH_SHORT).show();
+                if(profesor.equals(spprofe.getSelectedItem().toString())||materia.equals(spmate.getSelectedItem().toString())
+                        ||etNom.getText().toString().isEmpty()||etA.getText().toString().isEmpty()||fecha.equals("")){
+                    Toast.makeText(getApplicationContext(),"No se pudo registrar algunos datos pueden no estar completos\nNOTA: Asegurese de darle click al calendario y mover spinners",Toast.LENGTH_SHORT).show();
+                }else{
+                    registrarPractica();
+                    spprofe.setSelection(0);
+                    spmate.setSelection(0);
+                    etNom.setText("");
+                    etA.setText("");
+                    Toast.makeText(getApplicationContext(),"Registro exitoso",Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
@@ -101,55 +133,24 @@ public class Registro extends AppCompatActivity {
 
     private void obtenerListaMaterias() {
         materias=new ArrayList<String>();
-        materias.add("Materias");
+        materias.add("Materia");
 
         for (int i=0;i<listaMateria.size();i++){
             materias.add(listaMateria.get(i).getNombre());
         }
     }
+
+    private void registrarPractica() {
+        ConexionSQLiteHelper conn=new ConexionSQLiteHelper(this,"bd_Laboratorios",null,1);
+        SQLiteDatabase db=conn.getWritableDatabase();
+        ContentValues values =new ContentValues();
+        values.put(Utilidades.CAMPO_NOMBRE_PROFESOR,spprofe.getSelectedItem().toString());
+        values.put(Utilidades.CAMPO_NOMBRE_MATERIA,spmate.getSelectedItem().toString());
+        values.put(Utilidades.CAMPO_NOMBRE_PRACTICA,etNom.getText().toString());
+        values.put(Utilidades.CAMPO_CANTIDAD_ALUMNOS,etA.getText().toString());
+        values.put(Utilidades.CAMPO_FECHA,fecha);
+        Long idResultante=db.insert(Utilidades.TABLA_PRACTICA,Utilidades.CAMPO_ID,values);
+        Toast.makeText(getApplicationContext(),"Registro Practica "+idResultante,Toast.LENGTH_SHORT).show();
+        db.close();
+    }
 }
-
-
-/*public class Registro extends AppCompatActivity {
-    Spinner spprofe,spmate;
-    ArrayList<String> nmate;
-    ArrayList<BaseMaterias> materiaslist;
-    Conecxion conmm;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registro);
-        spprofe = (Spinner) findViewById(R.id.spprofe);
-        spmate = (Spinner) findViewById(R.id.spmate);
-        //conmm= new Conecxion(getApplicationContext(),"BaseMaterias",null, 1);
-        ArrayAdapter<CharSequence> adapter1=ArrayAdapter.createFromResource(this,R.array.profesores,android.R.layout.simple_spinner_item);
-        spprofe.setAdapter(adapter1);
-        //spinner materias;
-        //consultarlistamaterias();
-        ArrayAdapter<CharSequence> adapter2=new ArrayAdapter(this,android.R.layout.simple_spinner_item,nmate);
-        spmate.setAdapter(adapter2);
-    }
-
-    private void consultarlistamaterias() {
-        SQLiteDatabase db= conmm.getReadableDatabase();
-        BaseMaterias materia=null;
-        materiaslist=new ArrayList<BaseMaterias>();
-        //select from basematerias
-        Cursor cursor= db.rawQuery("SELECT * FROM "+Utilidades.TABLA_MATERIA,null);
-        while(cursor.moveToNext()){
-            materia=new BaseMaterias();
-            materia.setNombre(cursor.getString(0));
-            materiaslist.add(materia);
-        }
-    }
-
-    private void obtenerlista(){
-        nmate=new ArrayList<String>();
-        nmate.add("");
-        for(int i=0;i<materiaslist.size(); i++){
-            nmate.add(materiaslist.get(i).getNombre());
-        }
-    }
-
-
-}*/
