@@ -25,17 +25,17 @@ public class Utilidades {
     public static final String CAMPO_DD="DD";
     public static final String CAMPO_PROCESADOR="Procesador";
 
-    public static final String CAMPO_DEV="DEV C++";
+    public static final String CAMPO_DEV="DEVC";
     public static final String CAMPO_NET="Netbeans";
     public static final String CAMPO_ECLIP="Eclipse";
-    public static final String CAMPO_NOTE="Notepad ++";
+    public static final String CAMPO_NOTE="NotepadPlus";
     public static final String CAMPO_gED="gEdit";
     public static final String CAMPO_DIA="Dia";
     public static final String CAMPO_POST="PostgreSQL";
-    public static final String CAMPO_CISCO="Packet Tracer";
-    public static final String CAMPO_VIRTUAL="Virtual Box";
+    public static final String CAMPO_CISCO="PacketTracer";
+    public static final String CAMPO_VIRTUAL="VirtualBox";
     public static final String CAMPO_UNITY="Unity";
-    public static final String CAMPO_VS="Visual Studio";
+    public static final String CAMPO_VS="VisualStudio";
     public static final String CAMPO_INTERNET="Internet";
     public static final String CAMPO_OBSERVACIONES="Observaciones";
 

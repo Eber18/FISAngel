@@ -55,9 +55,9 @@ public class Mostrar_Mantenimiento extends AppCompatActivity {
 
     private void obtenerLista() {
         listaInformacionMantenimiento=new ArrayList<String>();
-        //listaInformacionMantenimiento.add("Mantenimientos");
+        listaInformacionMantenimiento.add("Mantenimientos");
 
-        for(int i=0;i<listaInformacionMantenimiento.size();i++){
+        for(int i=0;i<listaMantenimiento.size();i++){
             listaInformacionMantenimiento.add("ID de Mantenimiento: "+listaMantenimiento.get(i).getID()+"\nAl equipo: "
                     +listaMantenimiento.get(i).getEquipo()+"\nSe le realizó: "+listaMantenimiento.get(i).getDetalles()
                     +"\nEn la fecha: "+listaMantenimiento.get(i).getFecha());

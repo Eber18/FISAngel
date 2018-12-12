@@ -35,7 +35,8 @@
         <activity android:name=".Agregar_materia" />
         <activity android:name=".Mostrar_Practica" />
         <activity android:name=".Mostrar_Mantenimiento" />
-        <activity android:name=".Modificar_Inventario"></activity>
+        <activity android:name=".Modificar_Inventario" />
+        <activity android:name=".Mostrar_Inventario"></activity>
     </application>
 
 </manifest>

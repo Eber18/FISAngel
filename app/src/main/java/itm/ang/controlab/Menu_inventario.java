@@ -19,9 +19,8 @@ public class Menu_inventario extends AppCompatActivity {
         bVerin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                
-                //Intent s = new Intent( Menu_mantenimiento.this, Ver_inventario.class );
-                // startActivity(s);
+                Intent s = new Intent( Menu_inventario.this, Mostrar_Inventario.class );
+                startActivity(s);
             }
         });
         bModi.setOnClickListener(new View.OnClickListener() {
