@@ -30,13 +30,13 @@ public class Mostrar_Mantenimiento extends AppCompatActivity {
 
         listViewMantenimiento=(ListView)findViewById(R.id.listviewMantenimiento);
 
-        consultarListaPracticas();
+        consultarListaMantenimientos();
 
         ArrayAdapter adaptador=new ArrayAdapter(this,android.R.layout.simple_list_item_1,listaInformacionMantenimiento);
         listViewMantenimiento.setAdapter(adaptador);
     }
 
-    private void consultarListaPracticas() {
+    private void consultarListaMantenimientos() {
         SQLiteDatabase db=conn.getReadableDatabase();
 
         Mantenimiento mantenimiento=null;
@@ -44,9 +44,10 @@ public class Mostrar_Mantenimiento extends AppCompatActivity {
         Cursor cursor=db.rawQuery("SELECT * FROM "+Utilidades.TABLA_MANTENIMIENTO,null);
         while (cursor.moveToNext()){
             mantenimiento=new Mantenimiento();
-            mantenimiento.setEquipo(cursor.getString(0));
-            mantenimiento.setDetalles(cursor.getString(1));
-            mantenimiento.setFecha(cursor.getString(2));
+            mantenimiento.setID(cursor.getInt(0));
+            mantenimiento.setEquipo(cursor.getString(1));
+            mantenimiento.setDetalles(cursor.getString(2));
+            mantenimiento.setFecha(cursor.getString(3));
             listaMantenimiento.add(mantenimiento);
         }
         obtenerLista();
@@ -54,11 +55,12 @@ public class Mostrar_Mantenimiento extends AppCompatActivity {
 
     private void obtenerLista() {
         listaInformacionMantenimiento=new ArrayList<String>();
-        //listaInformacion.add("ID-Equipo-Detalles-Fecha");
+        //listaInformacionMantenimiento.add("Mantenimientos");
 
         for(int i=0;i<listaInformacionMantenimiento.size();i++){
-            listaInformacionMantenimiento.add(listaMantenimiento.get(i).getEquipo()+" - "+listaMantenimiento.get(i).getDetalles()+" - "
-                    +listaMantenimiento.get(i).getFecha());
+            listaInformacionMantenimiento.add("ID de Mantenimiento: "+listaMantenimiento.get(i).getID()+"\nAl equipo: "
+                    +listaMantenimiento.get(i).getEquipo()+"\nSe le realizó: "+listaMantenimiento.get(i).getDetalles()
+                    +"\nEn la fecha: "+listaMantenimiento.get(i).getFecha());
         }
     }
 }

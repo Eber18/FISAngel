@@ -3,6 +3,7 @@ package itm.ang.controlab;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 
 import itm.ang.controlab.Utilidades.Utilidades;
 
@@ -18,7 +19,7 @@ public class ConexionSQLiteHelper  extends SQLiteOpenHelper {
         db.execSQL(Utilidades.CREAR_TABLA_PROFESOR);
         db.execSQL(Utilidades.CREAR_TABLA_PRACTICA);
         db.execSQL(Utilidades.CREAR_TABLA_MANTENIMIENTO);
-        db.execSQL(Utilidades.CREAR_TABLA_INVENTARIO);
+        //db.execSQL(Utilidades.CREAR_TABLA_INVENTARIO);
         db.execSQL(Utilidades.CREAR_TABLA_USUARIOS);
     }
 

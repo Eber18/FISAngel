@@ -7,10 +7,17 @@
     <string name="alum">ALUMNOS ATENDIOS:</string>
     <string name="fecha">FECHA:</string>
     <string name="mantenimiento">MANTENIMIENTO:</string>
+    <string name="selec">SELECCIONA EL USUARIO\n A MODIFICAR:</string>
+    <string name="nombre">NUEVO NOMBRE:</string>
+    <string name="pass">NUEVA CONTRASEÑA:</string>
+    <string name="cpass">REPITE CONTRASEÑA:</string>
+    <string name="inpro">NOMBRE DEL PROFESOR:</string>
+    <string name="inmat">NOMBRE DE LA MATERIA:</string>
+    <string name="equipo">EQUIPO No:</string>
+
     <string name="serie">SERIE CPU:</string>
     <string name="serie2">SERIE:</string>
     <string name="regulador">REGULADOR:</string>
-    <string name="equipo">EQUIPO No:</string>
     <string name="software">SOFTWARE</string>
     <string name="hardware">HARDWARE</string>
     <string name="teclado">TECLADO:</string>
@@ -33,10 +40,5 @@
     <string name="internet">INTERNET:</string>
     <string name="visual">VISUAL STUDIO:</string>
     <string name="choose">ESCOJE EL SALÓN \nDONDE ESTA EL EQUIPO</string>
-    <string name="selec">SELECCIONA EL USUARIO\n A MODIFICAR:</string>
-    <string name="nombre">NUEVO NOMBRE:</string>
-    <string name="pass">NUEVA CONTRASEÑA:</string>
-    <string name="cpass">REPITE CONTRASEÑA:</string>
-    <string name="inpro">NOMBRE DEL PROFESOR:</string>
-    <string name="inmat">NOMBRE DE LA MATERIA:</string>
+
 </resources>

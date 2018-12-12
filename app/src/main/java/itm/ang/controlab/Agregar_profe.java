@@ -1,6 +1,7 @@
 package itm.ang.controlab;
 
 import android.content.ContentValues;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +17,8 @@ public class Agregar_profe extends AppCompatActivity {
     private EditText etapr;
     private Button bAcep;
 
+    ConexionSQLiteHelper conn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,20 +27,36 @@ public class Agregar_profe extends AppCompatActivity {
         etapr = (EditText) findViewById( R.id.etapr);
         bAcep = (Button) findViewById(R.id.bAcep);
 
+        conn=new ConexionSQLiteHelper(this,"bd_Laboratorios",null,1);
+
         bAcep.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                registrarProfesores();
+                if(etapr.getText().toString().isEmpty()){
+                    Toast.makeText(getApplicationContext(),"Registro no exitoso ",Toast.LENGTH_SHORT).show();
+                }else {
+                    SQLiteDatabase db = conn.getReadableDatabase();
+                    String[] profesor = {etapr.getText().toString()};
+                    try {
+                        Cursor cursor = db.rawQuery("SELECT " + Utilidades.CAMPO_NOMBRE_PROFESOR + " FROM "
+                                + Utilidades.TABLA_PROFESOR + " WHERE " + Utilidades.CAMPO_NOMBRE_PROFESOR + "=?", profesor);
+                        cursor.moveToFirst();
+                        Toast.makeText(getApplicationContext(), "Ya existe "+cursor.getString(0), Toast.LENGTH_SHORT).show();
+                    } catch (Exception e) {
+                        registrarProfesores();
+                        etapr.setText("");
+                    }
+                }
             }
         });
     }
 
     private void registrarProfesores(){
-        ConexionSQLiteHelper conn=new ConexionSQLiteHelper(this,"bd_Laboratorios",null,1); //Abriendo conexion
+        conn=new ConexionSQLiteHelper(this,"bd_Laboratorios",null,1); //Abriendo conexion
         SQLiteDatabase db=conn.getWritableDatabase();//Creando objeto para insertar datos
         ContentValues values =new ContentValues();//Objeto donde van a ir los datos
         values.put(Utilidades.CAMPO_NOMBRE_PROFESOR,etapr.getText().toString());//Se ponen los datos en la variable
         Long nombreResultante=db.insert(Utilidades.TABLA_PROFESOR,Utilidades.CAMPO_NOMBRE_PROFESOR,values);//insercion de datos
-        Toast.makeText(getApplicationContext(),"Registro Profesor "+nombreResultante,Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"Se agrego "+etapr.getText().toString(),Toast.LENGTH_SHORT).show();
         db.close();
     }
 }

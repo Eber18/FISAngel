@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -57,12 +59,12 @@ public class Mostrar_Practica extends AppCompatActivity {
 
     private void obtenerLista() {
         listaInformacionPractica=new ArrayList<String>();
-        //listaInformacion.add("ID-NombreP-NombreM-NombrePractica-Alumnos-Fecha");
+        listaInformacionPractica.add("Practicas");
 
-        for(int i=0;i<listaInformacionPractica.size();i++){
-            listaInformacionPractica.add(listaPractica.get(i).getID()+"-"+listaPractica.get(i).getProfesor()
-                    +"-"+listaPractica.get(i).getMateria()+"-"+listaPractica.get(i).getPractica()+"-"
-                    +listaPractica.get(i).getAlumnos()+"-"+listaPractica.get(i).getFecha());
+        for(int i=0;i<listaPractica.size();i++){
+            listaInformacionPractica.add("ID de Practica: "+listaPractica.get(i).getID()+"\nProfesor: "+listaPractica.get(i).getProfesor()
+                    +"\nMateria: "+listaPractica.get(i).getMateria()+"\nNombre de la Practica: "+listaPractica.get(i).getPractica()
+                    +"\nCantidad de Alumnos: " +listaPractica.get(i).getAlumnos()+"\nFecha: "+listaPractica.get(i).getFecha());
         }
     }
 }

@@ -9,7 +9,7 @@ public class Practica {
     private int alumnos;
     private String fecha;
 
-    public Practica(int ID, String profesor, String materia, String practica, int alumnos, String fecha) {
+    public Practica(String profesor, String materia, String practica, int alumnos, String fecha) {
         this.ID = ID;
         this.profesor = profesor;
         this.materia = materia;

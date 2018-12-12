@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Modificar_Inventario">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/serieCPU"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/serie"
+            android:textColor="@color/negro"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/etSerieCPU"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="105dp"
+            android:layout_marginTop="-40dp"
+            android:layout_marginRight="1dp"
+            android:hint="Num Serie"
+            android:inputType="text"/>
+
+        <TextView
+            android:id="@+id/tvTeclado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/teclado"
+            android:textColor="@color/negro"
+            android:textSize="20dp" />
+        <EditText
+            android:id="@+id/etTeclado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTeclado"
+            android:layout_marginLeft="95dp"
+            android:layout_marginTop="-35dp"
+            android:layout_marginRight="1dp"
+            android:hint="Num Serie"
+            android:inputType="text" />
+        <TextView
+            android:id="@+id/tvRaton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/mouse"
+            android:textColor="@color/negro"
+            android:textSize="20dp" />
+        <EditText
+            android:id="@+id/etRaton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="-35dp"
+            android:layout_marginRight="1dp"
+            android:hint="Num Serie"
+            android:inputType="text" />
+        <TextView
+            android:id="@+id/tvMonitor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/monitor"
+            android:textColor="@color/negro"
+            android:textSize="20dp" />
+        <EditText
+            android:id="@+id/etMonitor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="98dp"
+            android:layout_marginTop="-35dp"
+            android:layout_marginRight="1dp"
+            android:hint="Num Serie"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/tvRAM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/ram"
+            android:textColor="@color/negro"
+            android:textSize="20dp" />
+        <EditText
+            android:id="@+id/etRAM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="95dp"
+            android:layout_marginTop="-35dp"
+            android:layout_marginRight="1dp"
+            android:hint="Cantidad"
+            android:inputType="numberDecimal" />
+        <TextView
+            android:id="@+id/tvDD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/dd"
+            android:textColor="@color/negro"
+            android:textSize="20dp" />
+        <EditText
+            android:id="@+id/etDD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="-35dp"
+            android:layout_marginRight="1dp"
+            android:hint="Capacidad"
+            android:inputType="numberDecimal"/>
+        <TextView
+            android:id="@+id/tvProcesador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/procesador"
+            android:textColor="@color/negro"
+            android:textSize="20dp" />
+        <EditText
+            android:id="@+id/etProcesador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="135dp"
+            android:layout_marginTop="-35dp"
+            android:layout_marginRight="1dp"
+            android:hint="Core/Pentium"
+            android:inputType="text" />
+        <TextView
+            android:id="@+id/tvDev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/dev"
+            android:textColor="@color/negro"
+            android:textSize="20dp" />
+        <CheckBox
+            android:id="@+id/chbDev"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="-30dp"
+            android:layout_marginRight="180dp"/>
+
+        <TextView
+            android:id="@+id/tvNet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/net"
+            android:textColor="@color/negro"
+            android:textSize="20dp" />
+        <CheckBox
+            android:id="@+id/chbNet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="-30dp"
+            android:layout_marginRight="180dp"/>
+        <TextView
+            android:id="@+id/tvEcl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/eclip"
+            android:textColor="@color/negro"
+            android:textSize="20dp" />
+        <CheckBox
+            android:id="@+id/chbEcl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="-30dp"
+            android:layout_marginRight="180dp"/>
+        <TextView
+            android:id="@+id/tvNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/note"
+            android:textColor="@color/negro"
+            android:textSize="20dp" />
+        <CheckBox
+            android:id="@+id/chbNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="-30dp"
+            android:layout_marginRight="180dp"/>
+        <TextView
+            android:id="@+id/tvGed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/ged"
+            android:textColor="@color/negro"
+            android:textSize="20dp" />
+        <CheckBox
+            android:id="@+id/chbGed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="-30dp"
+            android:layout_marginRight="180dp"/>
+        <TextView
+            android:id="@+id/tvDia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/dia"
+            android:textColor="@color/negro"
+            android:textSize="20dp" />
+        <CheckBox
+            android:id="@+id/chbDia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="-30dp"
+            android:layout_marginRight="180dp"/>
+        <TextView
+            android:id="@+id/tvPost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/post"
+            android:textColor="@color/negro"
+            android:textSize="20dp" />
+        <CheckBox
+            android:id="@+id/chbPost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="-30dp"
+            android:layout_marginRight="180dp"/>
+
+        <TextView
+            android:id="@+id/tvCisco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/cisco"
+            android:textColor="@color/negro"
+            android:textSize="20dp" />
+        <CheckBox
+            android:id="@+id/chbCisco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="-30dp"
+            android:layout_marginRight="180dp"/>
+
+        <TextView
+            android:id="@+id/tvVir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/virtual"
+            android:textColor="@color/negro"
+            android:textSize="20dp" />
+        <CheckBox
+            android:id="@+id/chbVir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="-30dp"
+            android:layout_marginRight="180dp"/>
+
+        <TextView
+            android:id="@+id/tvUni"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/unity"
+            android:textColor="@color/negro"
+            android:textSize="20dp" />
+        <CheckBox
+            android:id="@+id/chbUni"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="-30dp"
+            android:layout_marginRight="180dp"/>
+
+        <TextView
+            android:id="@+id/tvVis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/visual"
+            android:textColor="@color/negro"
+            android:textSize="20dp" />
+        <CheckBox
+            android:id="@+id/chbVis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="-30dp"
+            android:layout_marginRight="180dp"/>
+        <TextView
+            android:id="@+id/tvInt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/internet"
+            android:textColor="@color/negro"
+            android:textSize="20dp" />
+        <CheckBox
+            android:id="@+id/chbInt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="-30dp"
+            android:layout_marginRight="180dp"/>
+        <Spinner
+            android:id="@+id/spSalon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></Spinner>
+        <TextView
+            android:id="@+id/tvOb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/observaciones"
+            android:textColor="@color/negro"
+            android:textSize="20dp" />
+        <EditText
+            android:id="@+id/etOb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="-35dp"
+            android:layout_marginRight="1dp"
+            android:hint="  observaciones"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/bCom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@color/negro"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="Completar"
+            android:textColor="@color/plata"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

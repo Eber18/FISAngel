@@ -66,7 +66,7 @@ public class Registro extends AppCompatActivity {
                     anioG=anio;
                     mesG=mes;
                     diaG=dia;
-                    fecha=""+anioG+"-"+mesG+"-"+diaG;
+                    fecha=""+anioG+"/"+mesG+"/"+diaG;
                     //Toast.makeText(calendarView.getContext(), "Año=" + anioG + " Mes=" + mesG + " dia=" + diaG, Toast.LENGTH_LONG).show();
                 }
             }

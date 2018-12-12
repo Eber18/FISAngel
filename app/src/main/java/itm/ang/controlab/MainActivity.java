@@ -22,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
         etUsuario = (EditText) findViewById( R.id.etUsuario );
         etPasword = (EditText) findViewById(R.id.etPassword);
         bEntrar = (Button) findViewById( R.id.bEntrar);
+
+        //Toast.makeText(getApplicationContext(),"HELLO ",Toast.LENGTH_LONG).show();
+
         nombres.add("yaneth");
         nombres.add("administrador");
         nombres.add("ayudante");

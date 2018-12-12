@@ -27,7 +27,7 @@ public class Menu_inventario extends AppCompatActivity {
         bModi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent s = new Intent( Menu_inventario.this, Seleccion_inventario_salon.class );
+                Intent s = new Intent( Menu_inventario.this, Modificar_Inventario.class );
                 startActivity(s);
             }
         });
