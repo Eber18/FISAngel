@@ -40,12 +40,14 @@ public class Cambiar_datos extends AppCompatActivity {
         bConfirmar = (Button) findViewById( R.id.bConfirmar);
         esNom= (Spinner)findViewById(R.id.esNom);
 
+        conn=new ConexionSQLiteHelper(this,"bd_Laboratorios",null,1);
+
         final String usuarioTexto="Usuario";
 
-        //consultarListaUsuarios();
+        consultarListaUsuarios();
 
-        //ArrayAdapter<CharSequence> adaptador=new ArrayAdapter(this,android.R.layout.simple_spinner_item,usuarios);
-        //esNom.setAdapter(adaptador);
+        ArrayAdapter<CharSequence> adaptador=new ArrayAdapter(this,android.R.layout.simple_spinner_item,usuarios);
+        esNom.setAdapter(adaptador);
 
         bConfirmar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -96,7 +98,7 @@ public class Cambiar_datos extends AppCompatActivity {
 
     private void actualizarUsuario(){
         SQLiteDatabase db=conn.getWritableDatabase();
-        String[] nombre={etn.getText().toString().trim()};
+        String[] nombre={esNom.getSelectedItem().toString()};
 
         ContentValues values=new ContentValues();
         values.put(Utilidades.CAMPO_USUARIO,etn.getText().toString().trim());
