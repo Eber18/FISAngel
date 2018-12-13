@@ -64,6 +64,7 @@ public class Cambiar_datos extends AppCompatActivity {
                     etn.setText("");
                     etp.setText("");
                     etcp.setText("");
+                    consultarListaUsuarios();
                     //Toast.makeText(getApplicationContext(),"Registro exitoso",Toast.LENGTH_SHORT).show();
                 }
             }

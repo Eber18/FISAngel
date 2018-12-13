@@ -175,7 +175,6 @@ public class MainActivity extends AppCompatActivity {
 
         for (int i=0;i<listaUsuarios.size();i++){
             nombres.add(listaUsuarios.get(i).getUsuario());
-            Toast.makeText(getApplicationContext(),"Registro Practica "+nombres.get(i).toString(),Toast.LENGTH_SHORT).show();
         }
     }
     private void obtenerListaContraseñas() {
@@ -183,7 +182,6 @@ public class MainActivity extends AppCompatActivity {
 
         for (int i=0;i<listaContraseñas.size();i++){
             passwords.add(listaContraseñas.get(i).getContraseña());
-            Toast.makeText(getApplicationContext(),"Contraseña "+passwords.get(i).toString(),Toast.LENGTH_SHORT).show();
         }
     }
 }
