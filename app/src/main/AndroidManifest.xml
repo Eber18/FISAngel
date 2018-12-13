@@ -36,7 +36,8 @@
         <activity android:name=".Mostrar_Practica" />
         <activity android:name=".Mostrar_Mantenimiento" />
         <activity android:name=".Modificar_Inventario" />
-        <activity android:name=".Mostrar_Inventario"></activity>
+        <activity android:name=".Mostrar_Inventario" />
+        <activity android:name=".Ver_Datos"></activity>
     </application>
 
 </manifest>

@@ -14,6 +14,7 @@
     <string name="inpro">NOMBRE DEL PROFESOR:</string>
     <string name="inmat">NOMBRE DE LA MATERIA:</string>
     <string name="equipo">EQUIPO No:</string>
+    <string name="salon">SALON</string>
 
     <string name="serie">SERIE CPU:</string>
     <string name="serie2">SERIE:</string>

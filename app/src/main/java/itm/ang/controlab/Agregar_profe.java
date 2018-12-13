@@ -35,12 +35,13 @@ public class Agregar_profe extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Registro no exitoso ",Toast.LENGTH_SHORT).show();
                 }else {
                     SQLiteDatabase db = conn.getReadableDatabase();
-                    String[] profesor = {etapr.getText().toString()};
+                    String[] profesor = {etapr.getText().toString().trim().toUpperCase()};
                     try {
                         Cursor cursor = db.rawQuery("SELECT " + Utilidades.CAMPO_NOMBRE_PROFESOR + " FROM "
                                 + Utilidades.TABLA_PROFESOR + " WHERE " + Utilidades.CAMPO_NOMBRE_PROFESOR + "=?", profesor);
                         cursor.moveToFirst();
                         Toast.makeText(getApplicationContext(), "Ya existe "+cursor.getString(0), Toast.LENGTH_SHORT).show();
+                        etapr.setText("");
                     } catch (Exception e) {
                         registrarProfesores();
                         etapr.setText("");
@@ -54,7 +55,7 @@ public class Agregar_profe extends AppCompatActivity {
         conn=new ConexionSQLiteHelper(this,"bd_Laboratorios",null,1); //Abriendo conexion
         SQLiteDatabase db=conn.getWritableDatabase();//Creando objeto para insertar datos
         ContentValues values =new ContentValues();//Objeto donde van a ir los datos
-        values.put(Utilidades.CAMPO_NOMBRE_PROFESOR,etapr.getText().toString());//Se ponen los datos en la variable
+        values.put(Utilidades.CAMPO_NOMBRE_PROFESOR,etapr.getText().toString().trim().toUpperCase());//Se ponen los datos en la variable
         Long nombreResultante=db.insert(Utilidades.TABLA_PROFESOR,Utilidades.CAMPO_NOMBRE_PROFESOR,values);//insercion de datos
         Toast.makeText(getApplicationContext(),"Se agrego "+etapr.getText().toString(),Toast.LENGTH_SHORT).show();
         db.close();

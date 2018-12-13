@@ -149,7 +149,7 @@
             android:textColor="@color/negro"
             android:textSize="20dp" />
         <CheckBox
-            android:id="@+id/chbDev"
+            android:id="@+id/chbDevC"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="150dp"
@@ -165,7 +165,7 @@
             android:textColor="@color/negro"
             android:textSize="20dp" />
         <CheckBox
-            android:id="@+id/chbNet"
+            android:id="@+id/chbNetB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="150dp"
@@ -180,7 +180,7 @@
             android:textColor="@color/negro"
             android:textSize="20dp" />
         <CheckBox
-            android:id="@+id/chbEcl"
+            android:id="@+id/chbEclip"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="150dp"
@@ -195,7 +195,7 @@
             android:textColor="@color/negro"
             android:textSize="20dp" />
         <CheckBox
-            android:id="@+id/chbNote"
+            android:id="@+id/chbNotep"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="150dp"
@@ -210,7 +210,7 @@
             android:textColor="@color/negro"
             android:textSize="20dp" />
         <CheckBox
-            android:id="@+id/chbGed"
+            android:id="@+id/chbGede"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="150dp"
@@ -225,7 +225,7 @@
             android:textColor="@color/negro"
             android:textSize="20dp" />
         <CheckBox
-            android:id="@+id/chbDia"
+            android:id="@+id/chbDIA"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="150dp"
@@ -240,7 +240,7 @@
             android:textColor="@color/negro"
             android:textSize="20dp" />
         <CheckBox
-            android:id="@+id/chbPost"
+            android:id="@+id/chbPostg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="150dp"
@@ -256,7 +256,7 @@
             android:textColor="@color/negro"
             android:textSize="20dp" />
         <CheckBox
-            android:id="@+id/chbCisco"
+            android:id="@+id/chbCiscoP"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="150dp"
@@ -272,7 +272,7 @@
             android:textColor="@color/negro"
             android:textSize="20dp" />
         <CheckBox
-            android:id="@+id/chbVir"
+            android:id="@+id/chbVirt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="150dp"
@@ -288,7 +288,7 @@
             android:textColor="@color/negro"
             android:textSize="20dp" />
         <CheckBox
-            android:id="@+id/chbUni"
+            android:id="@+id/chbUnin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="150dp"
@@ -304,7 +304,7 @@
             android:textColor="@color/negro"
             android:textSize="20dp" />
         <CheckBox
-            android:id="@+id/chbVis"
+            android:id="@+id/chbVS"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="150dp"
@@ -319,16 +319,24 @@
             android:textColor="@color/negro"
             android:textSize="20dp" />
         <CheckBox
-            android:id="@+id/chbInt"
+            android:id="@+id/chbInter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="150dp"
             android:layout_marginTop="-30dp"
             android:layout_marginRight="180dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/salon"
+            android:textColor="@color/negro"
+            android:textSize="20dp"/>
         <Spinner
             android:id="@+id/spSalon"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"></Spinner>
+            android:layout_height="wrap_content"
+            android:layout_marginStart="104dp"></Spinner>
         <TextView
             android:id="@+id/tvOb"
             android:layout_width="wrap_content"
@@ -348,7 +356,7 @@
             android:inputType="text" />
 
         <Button
-            android:id="@+id/bCom"
+            android:id="@+id/bComple"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

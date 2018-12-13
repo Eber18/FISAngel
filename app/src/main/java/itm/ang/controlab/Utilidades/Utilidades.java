@@ -37,6 +37,7 @@ public class Utilidades {
     public static final String CAMPO_UNITY="Unity";
     public static final String CAMPO_VS="VisualStudio";
     public static final String CAMPO_INTERNET="Internet";
+    public static final String CAMPO_SALON="Salon";
     public static final String CAMPO_OBSERVACIONES="Observaciones";
 
     public static final String CREAR_TABLA_MATERIA="CREATE TABLE "+TABLA_MATERIA+"("+CAMPO_NOMBRE_MATERIA+" VARCHAR(30))";
@@ -55,7 +56,8 @@ public class Utilidades {
             +CAMPO_RAM+" VARCHAR(20), "+CAMPO_DD+" VARCHAR(20), "+CAMPO_PROCESADOR+" VARCHAR(20), "+CAMPO_DEV+" VARCHAR(3), "
             +CAMPO_NET+" VARCHAR(3), "+CAMPO_ECLIP+" VARCHAR(3), "+CAMPO_NOTE+" VARCHAR(3), "+CAMPO_gED+" VARCHAR(3), "
             +CAMPO_DIA+" VARCHAR(3), " +CAMPO_POST+" VARCHAR(3), "+CAMPO_CISCO+" VARCHAR(3), "+CAMPO_VIRTUAL+" VARCHAR(3), "
-            +CAMPO_UNITY+" VARCHAR(3), " +CAMPO_VS+" VARCHAR(3), "+CAMPO_INTERNET+" VARCHAR(3), "+CAMPO_OBSERVACIONES+" TEXT)";
+            +CAMPO_UNITY+" VARCHAR(3), " +CAMPO_VS+" VARCHAR(3), "+CAMPO_INTERNET+" VARCHAR(3), "+CAMPO_SALON+" VARCHAR(5), "
+            +CAMPO_OBSERVACIONES+" TEXT)";
 
     public static final String CREAR_TABLA_USUARIOS="CREATE TABLE "+TABLA_USUARIOS
             +"("+CAMPO_USUARIO+" VARCHAR(20), "+CAMPO_CONTRASEÑA+" TEXT)";

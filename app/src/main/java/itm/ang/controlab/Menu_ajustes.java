@@ -19,8 +19,8 @@ public class Menu_ajustes extends AppCompatActivity {
         bVerc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Intent s = new Intent( Menu_ajustes.this, VerDatos.class );
-                //startActivity(s);
+                Intent s = new Intent( Menu_ajustes.this, Ver_Datos.class );
+                startActivity(s);
             }
         });
         bCcon.setOnClickListener(new View.OnClickListener() {

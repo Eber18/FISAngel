@@ -34,7 +34,7 @@ public class Agregar_materia extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Registro no exitoso ",Toast.LENGTH_SHORT).show();
                 }else{
                     SQLiteDatabase db=conn.getReadableDatabase();
-                    String[] materia={etamat.getText().toString()};
+                    String[] materia={etamat.getText().toString().trim().toUpperCase()};
 
                     try {
                         Cursor cursor=db.rawQuery("SELECT "+Utilidades.CAMPO_NOMBRE_MATERIA+" FROM "
@@ -55,7 +55,7 @@ public class Agregar_materia extends AppCompatActivity {
         conn=new ConexionSQLiteHelper(this,"bd_Laboratorios",null,1); //Abriendo conexion
         SQLiteDatabase db=conn.getWritableDatabase();//Creando objeto para insertar datos
         ContentValues values =new ContentValues();//Objeto donde van a ir los datos
-        values.put(Utilidades.CAMPO_NOMBRE_MATERIA,etamat.getText().toString());//Se ponen los datos en la variable
+        values.put(Utilidades.CAMPO_NOMBRE_MATERIA,etamat.getText().toString().trim().toUpperCase());//Se ponen los datos en la variable
         Long nombreResultante=db.insert(Utilidades.TABLA_MATERIA,Utilidades.CAMPO_NOMBRE_MATERIA,values);//insercion de datos
         Toast.makeText(getApplicationContext(),"Se agrego "+etamat.getText().toString(),Toast.LENGTH_SHORT).show();
         db.close();
